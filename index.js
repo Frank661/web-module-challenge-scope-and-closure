@@ -126,28 +126,65 @@ console.log('task 4')
 function scoreboard(callback, innings) {
   let home = 0;
   let away = 0;
-  for(let i = 0; i <= innings; i++){  
+
+  for(let i = 1; i < innings; i++){  
     home = callback() + home;
- 	  away = callback() + away;
-    
-    }
-    return [
-    '1st inning:'+ home + '-' + away, 
-    '2nd inning:'+ home + '-' + away, 
-    '3rd inning:'+ home + '-' + away,
-    '4th inning:'+ home + '-' + away,
-    '5th inning:'+ home + '-' + away,
-    '6th inning:'+ home + '-' + away,
-    '7th inning:'+ home + '-' + away,
-    '8th inning:'+ home + '-' + away,
-    '9th inning:'+ home + '-' + away,
-  
-    'Final Score:'+ home +'-'+away
-  ]
-    
-  
-}
+    away = callback() + away;
+    if(i === 1){
+      console.log(`${i}st inning: ${home} - ${away}`);
+      }
+      else if(i === 2){
+        console.log(`${i}nd inning: ${home} - ${away}`);
+      }
+      else if(i === 3){
+        console.log(`${i}rd inning: ${home} - ${away}`);
+      }
+        else{
+        console.log(`${i}th inning: ${home} - ${away}`);
+      }
+      }
+    console.log(`Final Score: Home : ${home} - ${away}`)
+   }
+
+scoreboard(inning, 10);
 
 
 
-console.log(scoreboard(inning, 9))
+
+
+
+
+
+ //    if (innings > 1) {console.log('1st inning: '+home+'-'+away)}}
+  // for(let i = 0; i < 1; i++){  
+  //      home = callback() + home;
+  //      away = callback() + away;
+  //    if (innings > 2) { console.log('2nd inning: '+home+'-'+away)}}
+  //    for(let i = 0; i < 1; i++){  
+  //      home = callback() + home;
+  //      away = callback() + away;
+  //    if (innings > 3) {console.log('3rd inning: '+home+'-'+away)}}
+  //    for(let i = 0; i < 1; i++){  
+  //     home = callback() + home;
+  //     away = callback() + away;
+  //   if (innings > 4) {console.log('4th inning: '+home+'-'+away)}}
+  //   for(let i = 0; i < 1; i++){  
+  //     home = callback() + home;
+  //     away = callback() + away;
+  //   if (innings > 5) {console.log('5th inning: '+home+'-'+away)}}
+  //   for(let i = 0; i < 1; i++){  
+  //     home = callback() + home;
+  //     away = callback() + away;
+  //   if (innings > 6) {console.log('6th inning: '+home+'-'+away)}}
+  //   for(let i = 0; i < 1; i++){  
+  //     home = callback() + home;
+  //     away = callback() + away;
+  //   if (innings > 7) {console.log('7th inning: '+home+'-'+away)}}
+  //   for(let i = 0; i < 1; i++){  
+  //     home = callback() + home;
+  //     away = callback() + away;
+  //   if (innings > 8) {console.log('8th inning: '+home+'-'+away)}}
+  //   for(let i = 0; i < 1; i++){  
+  //     home = callback() + home;
+  //     away = callback() + away;
+  //   if (innings >= 9) {console.log('9th inning: '+home+'-'+away)}}
